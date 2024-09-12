@@ -1,0 +1,44 @@
+// Install REST CLIENT on vscode to use these endpoints
+
+// to create a new member use another API tool, such as thunder client for vscode
+
+
+# POST http://localhost:8080/member/create
+# Content-Type: multipart/form-data
+
+
+// endpoint to logon and get token
+###
+POST http://localhost:8080/auth/login-member
+Content-Type: application/json
+
+{
+    "username": "",
+    "password": "" 
+} 
+
+
+// get all members
+###
+GET http://localhost:8080/member/get-all-members
+Content-Type: application/json
+Authorization: Bearer {token}
+
+// get picture member
+###
+GET http://localhost:8080/member/get-photo
+Content-Type: application/json
+Authorization: Bearer {token}
+
+// update all field
+###
+PUT http://localhost:8080/member/put-member
+Content-Type: application/json
+Authorization: Bearer {token}
+
+{
+    "name": "",
+    "username": "",
+    "mail": "",
+    "password": ""
+} 
